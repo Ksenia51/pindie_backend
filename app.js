@@ -3,11 +3,11 @@ const path = require("path");
 const bodyParser = require("body-parser");
 
 const gamesRouter = require("./routes/games");
-const categoriesRoutes = require("./routes/categories");
+//const categoriesRoutes = ("./routes/categories") 
 const usersRouter = require("./routes/users");
-const connectToDatabase = require("");
+const connectToDatabase = require("./database/connect");
 
-const PORT = 3000;
+const PORT = 3001;
 
 const app = express();
 connectToDatabase();
@@ -17,7 +17,6 @@ app.use(
     express.static(path.join(__dirname, "public")),
     usersRouter,
     gamesRouter,
-    categoriesRoutes
 );
 
 app.listen(PORT, () => {
