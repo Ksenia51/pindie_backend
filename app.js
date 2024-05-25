@@ -16,7 +16,10 @@ connectToDatabase();
 app.use(
     bodyParser.json(),
     express.static(path.join(__dirname, "public")),
-    apiRouter
+    apiRouter,
+    //usersRouter,
+    //gamesRouter,
+    //categoriesRouter
 );
 
 app.listen(PORT, () => {
