@@ -6,7 +6,7 @@ const findAllCategories = async (req, res, next) => {
 };
 
 const findCategoryById = async (req, res, next) => {
-    console.log(`GET /category/${req.params.id}`);
+    console.log(`GET /categories/${req.params.id}`);
     try {
         req.category = await categories.findById(req.params.id);
         next();
