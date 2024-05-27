@@ -8,7 +8,7 @@ const connectToDatabase = require("./database/connect");
 //const categoriesRouter = require("./routes/categories");
 const apiRouter = require("./routes/api");
 
-const PORT = 3000;
+const PORT = 3001;
 
 const app = express();
 connectToDatabase();

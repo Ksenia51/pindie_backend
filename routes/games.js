@@ -5,9 +5,9 @@ const { findAllGames, findGameById, createGame, deleteGame, updateGame } = requi
 const gamesRouter = require("express").Router();
 
 gamesRouter.get("/games", findAllGames, sendAllGames);
-gamesRouter.get("games/:id", findGameById, sendGameById);
+gamesRouter.get("/games/:id", findGameById, sendGameById);
 gamesRouter.post("/games", checkAuth, createGame, sendGameCreated);
-gamesRouter.delete("games/:id", checkAuth, deleteGame, sendGameDeleted);
-gamesRouter.put("games/:id", checkAuth, findGameById, updateGame, sendGameUpdate);
+gamesRouter.delete("/games/:id", checkAuth, deleteGame, sendGameDeleted);
+gamesRouter.put("/games/:id", checkAuth, findGameById, updateGame, sendGameUpdate);
 
 module.exports = gamesRouter;

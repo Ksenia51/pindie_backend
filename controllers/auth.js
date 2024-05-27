@@ -22,7 +22,7 @@ const login = (req, res) => {
         });
     })
     .catch((error) => {
-      re.status(401).send({ message: error.massege });
+      res.status(401).send({ message: error.message });
     });
 };
 

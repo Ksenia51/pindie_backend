@@ -5,9 +5,9 @@ const { findAllUsers, findUserById, createUser, deleteUser, updateUser, hashPass
 const usersRouter = require("express").Router();
 
 usersRouter.get("/users", findAllUsers, sendAllUsers);
-usersRouter.get("users/:id", findUserById, sendUserById);
+usersRouter.get("/users/:id", findUserById, sendUserById);
 usersRouter.post("/users", hashPassword, createUser, sendUserCreated);
-usersRouter.delete("users/:id", checkAuth, deleteUser, sendUserDeleted);
-usersRouter.put("users/:id", checkAuth, findUserById, updateUser, sendUserUpdate);
+usersRouter.delete("/users/:id", checkAuth, deleteUser, sendUserDeleted);
+usersRouter.put("/users/:id", checkAuth, findUserById, updateUser, sendUserUpdate);
 
 module.exports = usersRouter;
