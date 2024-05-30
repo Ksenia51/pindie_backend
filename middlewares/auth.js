@@ -15,7 +15,7 @@ const checkAuth = (req, res, next) => {
 };
 
 const checkCookiesJWT = (req, res, next) => {
-    if (req.cookies.jwt) {
+    if (!req.cookies.jwt) {
         return res.redirect("/");
     }
     req.headers.authorization = `Bearer ${req.cookies.jwt}`;
